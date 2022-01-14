@@ -10,7 +10,11 @@ import {
   Twitter,
   Tiktok,
 } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 export default function Contact() {
   const sendEmail = (e) => {
@@ -26,7 +30,7 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          toast.success("Form Submitted Successfully");
         },
         (error) => {
           console.log(error.text);
@@ -36,16 +40,21 @@ export default function Contact() {
   };
   return (
     <>
+    <Header/>
       <div className="form">
-        <Header />
+        <div className="container">
+        <ToastContainer position="top-center" />
+        <div className="form-group">
         <form onSubmit={sendEmail}>
+          <div className="contact-me">
+            <h1>Contact me</h1>
+          </div>
           <Form.Group role="form">
             <Form.Group controlId="formBasicSubject">
               <Form.Label>Subject</Form.Label>
               <Form.Control
                 placeholder="Subject"
                 name="subject"
-                style={{ width: "95vw" }}
               />
             </Form.Group>
             <Form.Group controlId="formBasicName">
@@ -53,7 +62,6 @@ export default function Contact() {
               <Form.Control
                 placeholder="Name"
                 name="name"
-                style={{ width: "95vw" }}
               />
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
@@ -62,7 +70,6 @@ export default function Contact() {
                 type="email"
                 placeholder="Enter email"
                 name="email"
-                style={{ width: "95vw" }}
               />
               <Form.Text className="text-muted">
                 I'll never share your email with anyone else.
@@ -74,7 +81,6 @@ export default function Contact() {
                 as="textarea"
                 rows={3}
                 name="message"
-                style={{ width: "95vw" }}
               />
             </Form.Group>
             <p> </p>
@@ -84,28 +90,29 @@ export default function Contact() {
             </Button>
           </Form.Group>
         </form>
-
-        <h3>You can also reach out to me on</h3>
-        <Link to="https://www.instagram.com/asosu4you/">
-          <Instagram /> @asosu4u
-        </Link>
-        <Link to="https://www.instagram.com/">
-          <Facebook />
-          Facebook
-        </Link>
-        <Link to="https://www.instagram.com/">
-          <Twitter />
-          Twitter
-        </Link>
-        <Link to="https://www.instagram.com/">
-          <Tiktok />
-          Tiktok
-        </Link>
-        <Link to="https://www.instagram.com/">
-          <Envelope />
-          asosu4you@gmail.com
-        </Link>
       </div>
-    </>
+      <div className="contact-group">
+        <h3>You can also find me on:</h3>
+        <div className="links">
+        <a href="https://www.instagram.com/asosu4you/">
+          <Instagram /> @asosu4u
+        </a>
+        <a href="https://www.instagram.com/">
+          <Facebook /> Facebook
+        </a>
+        <a href="https://www.instagram.com/">
+          <Twitter /> Twitter
+        </a>
+        <a href="https://www.instagram.com/">
+          <Tiktok /> Tiktok
+        </a>
+        <a href="https://www.instagram.com/">
+          <Envelope /> asosu4you@gmail.com
+        </a>
+        </div>
+        </div>
+      </div>
+      </div>
+      </>
   );
 }

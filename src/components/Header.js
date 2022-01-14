@@ -1,20 +1,28 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-
-export default function Header() {
+import { Container, Navbar, Nav } from "react-bootstrap";
+function Header() {
     return (
-        <nav className='header'>
-            <ul>
-                <li>
-                    <NavLink to="/">Home</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/about">About</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/contact">Contact</NavLink>
-                </li>
-            </ul>
-        </nav>
-    )
-}
+      <Navbar className="navbar" bg="dark" expand="lg" variant="dark">
+        <Container className="navbar-container">
+          <Navbar.Brand href="/">
+            {""}
+            <h1 className="brand-text">K / G</h1>
+          </Navbar.Brand>
+  
+          <Navbar.Toggle />
+          <Navbar.Collapse collapseOnSelect>
+            <Nav
+              className="me-auto nav-links justify-content-end"
+              style={{ width: "100%" }}
+            >
+              <Nav.Link href="/" className="nav-link">Home</Nav.Link>
+              <Nav.Link href="/about" className="nav-link">About</Nav.Link>
+              <Nav.Link href="/contact" className="nav-link">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    );
+  }
+  
+  export default Header;
