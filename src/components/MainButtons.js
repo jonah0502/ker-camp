@@ -99,11 +99,11 @@ export default function MainButtons() {
     return (
 
         <Row className="align-items-center justify-content-center">
-        <div className="butts"><Button variant="outline-light" onClick={createServ}>Services</Button>{' '}
+        <Button variant="outline-light" onClick={createServ}>Services</Button>{' '}
         <Button variant="outline-light" onClick={createHealth}>Health</Button>{' '}
         <Button variant="outline-light" onClick={createEnv}>Environmental</Button>{' '}
         <Button variant="outline-light" onClick={createEA}>Experiences / Accessibility</Button>{' '}
-        </div>
+        
         </Row>
  
     )
