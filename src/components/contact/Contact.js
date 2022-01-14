@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap-icons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Container, Row, Col } from "react-bootstrap";
 
 
 
@@ -85,9 +86,11 @@ export default function Contact() {
             </Form.Group>
             <p> </p>
             <p></p>
-            <Button variant="primary" type="submit">
+            <Row className="align-items-center">
+            <Button variant="primary" type="submit" className="center">
               Submit form
             </Button>
+            </Row>
           </Form.Group>
         </form>
       </div>
