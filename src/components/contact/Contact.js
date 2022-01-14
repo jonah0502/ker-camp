@@ -48,7 +48,7 @@ export default function Contact() {
         <div className="form-group">
         <form onSubmit={sendEmail}>
           <div className="contact-me">
-            <h1>Contact me</h1>
+            <h1>Contact Us</h1>
           </div>
           <Form.Group role="form">
             <Form.Group controlId="formBasicSubject">
@@ -95,7 +95,7 @@ export default function Contact() {
         </form>
       </div>
       <div className="contact-group">
-        <h3>You can also find me on:</h3>
+        <h3>You can also find us on:</h3>
         <div className="links">
         <a href="https://www.instagram.com/asosu4you/">
           <Instagram /> @asosu4u
