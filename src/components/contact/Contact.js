@@ -73,7 +73,7 @@ export default function Contact() {
                 name="email"
               />
               <Form.Text className="text-muted">
-                I'll never share your email with anyone else.
+                We'll never share your email with anyone else.
               </Form.Text>
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -97,19 +97,10 @@ export default function Contact() {
       <div className="contact-group">
         <h3>You can also find us on:</h3>
         <div className="links">
-        <a href="https://www.instagram.com/asosu4you/">
+        <a href="https://www.instagram.com/osu4you/">
           <Instagram /> @asosu4u
         </a>
-        <a href="https://www.instagram.com/">
-          <Facebook /> Facebook
-        </a>
-        <a href="https://www.instagram.com/">
-          <Twitter /> Twitter
-        </a>
-        <a href="https://www.instagram.com/">
-          <Tiktok /> Tiktok
-        </a>
-        <a href="https://www.instagram.com/">
+        <a href="asosu4you@gmail.com">
           <Envelope /> asosu4you@gmail.com
         </a>
         </div>

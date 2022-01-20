@@ -6,7 +6,7 @@ function Header() {
         <Container className="navbar-container">
           <Navbar.Brand href="/">
             {""}
-            <h1 className="brand-text">K / G</h1>
+            <h1 className="brand-text">OSU4YOU</h1>
           </Navbar.Brand>
   
           <Navbar.Toggle />
