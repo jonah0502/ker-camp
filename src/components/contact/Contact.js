@@ -98,7 +98,7 @@ export default function Contact() {
         <h3>You can also find us on:</h3>
         <div className="links">
         <a href="https://www.instagram.com/osu4you/">
-          <Instagram /> @asosu4u
+          <Instagram /> @osu4u
         </a>
         <a href="asosu4you@gmail.com">
           <Envelope /> asosu4you@gmail.com
